@@ -1,85 +1,61 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import AboutView from '@/views/AboutView.vue';
+<script setup>
+
 </script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <nav>
+    <ul>
+      <li>
+        <RouterLink class="rout" to="/">Home</RouterLink>
+      </li>
+      <li>
+        <RouterLink class="rout" to="/about">About</RouterLink>
+      </li>
+      <li>
+        <RouterLink class="rout" to="/contact">Contact</RouterLink>
+      </li>
+      <li>
+        <RouterLink class="rout" to="/productlist">Product List</RouterLink>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
+<style>
   nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    background-color: rgb(133, 118, 95);
+    color: white;
+    padding: 5%;
+    text-align: center;
   }
-}
+
+  nav ul, ul {
+    list-style-type: none;
+    margin: 3px;
+    padding: 0;
+    display: flex;
+  }
+
+  nav a {
+    
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  main a {
+    color: rgb(223, 255, 82);
+    background-color: black;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  li {
+    margin: 5px;
+  }
 </style>

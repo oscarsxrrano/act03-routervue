@@ -1,9 +1,14 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+<script setup >
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1>Home Page</h1>
   </main>
 </template>
+
+<style>
+body {
+  background-color: antiquewhite;
+}
+</style>
